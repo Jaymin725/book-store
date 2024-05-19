@@ -3,6 +3,7 @@ const database = require("../config/database");
 
 const userSchema = new Schema({
   title: { type: String, required: true },
+  img_url: String,
   description: String,
 });
 
