@@ -1,12 +1,12 @@
 const { Schema } = require("mongoose");
 const database = require("../config/database");
 
-const userSchema = new Schema({
+const bookSchema = new Schema({
   title: { type: String, required: true },
   img_url: String,
   description: String,
 });
 
-const User = database.model("User", userSchema);
+const Book = database.model("Book", bookSchema);
 
-module.exports = User;
+module.exports = Book;

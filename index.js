@@ -1,12 +1,16 @@
 const express = require("express");
-const userRoute = require("./routes/userRoute");
+const bookRoute = require("./routes/bookRoute");
 const app = express();
 
 const port = 3000;
 
-app.use("/users", userRoute);
+app.set("view engine", "ejs");
 
-app.get("/", (req, res) => res.redirect("/users"));
+app.use("/books", bookRoute);
+
+app.get("/", (req, res) => res.redirect("/books"));
+
+app.get("/add-book", (req, res) => res.render("add-book"));
 
 app.listen(port, (error) => {
   if (error) console.error(error);
