@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookStore</title>
+  </head>
+  <body>
+    <header>
+      <h1>BookStore</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Edit Book</h2>
+        <form action="/books" method="put">
+          <table>
+            <tbody>
+              <tr>
+                <td><label for="title">Title</label></td>
+                <td>
+                  <input
+                    type="text"
+                    name="title"
+                    id=""
+                    value="<%= book.title %>"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="img_url">Image URL</label></td>
+                <td>
+                  <input
+                    type="url"
+                    name="img_url"
+                    id=""
+                    value="<%= book.img_url %>"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="description">Description</label></td>
+                <td>
+                  <textarea name="description" id="">
+<%= book.description %></textarea
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><button type="submit">Edit Book</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
